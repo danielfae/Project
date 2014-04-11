@@ -1,7 +1,7 @@
 Final Project
 =======
 
-Online surveys depending on location of surveyor and Newsletter subscription.
+Online surveys depending on location of surveyor and the option for a Newsletter subscription.
 
 Using Google Maps API I want to display places in the world where a person wants to give away a survey for anyone to fill out.
 
