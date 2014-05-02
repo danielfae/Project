@@ -9,7 +9,7 @@ The surveys will be created and administered using SurveyMonkey API.
 
 Finally, I will add a Newsletter subscription using Mailchimp API.
 
-This will be acomplished independently for a personal proyect without the use of the BeagleBone.
+This will be acomplished independently for a personal project without the use of the BeagleBone.
 
 
 Physical Computing
