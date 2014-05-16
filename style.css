@@ -1,0 +1,305 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#main {
+	position: fixed;
+	height: 200%;
+	width: 100%;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.hero-overlay {
+		-webkit-transition-duration: 1500ms;
+-moz-transition-duration: 1500ms;
+transition-duration: 1500ms;
+-webkit-transition-duration: 1500ms;
+-moz-transition-duration: 1500ms;
+	display: block;
+	height: 50%;
+	background: url("./hero.jpg");
+
+}
+
+nav#timeline {
+	-webkit-transition-duration: 500ms;
+-moz-transition-duration: 500ms;
+transition-duration: 500ms;
+-webkit-transition-duration: 500ms;
+-moz-transition-duration: 500ms;
+	position: relative;
+	left: 0%; /* Set left explicitly to access via .style.left in JS */
+	bottom: 0%;
+	height: 100%;
+	width: 100%;
+}
+
+/* Treating the panels as an unstyled, ordered list */
+nav#timeline ol {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	height: 100%;
+	width: 100%;
+}
+
+nav#timeline li {
+	position: absolute; /* Absolute positioning to enable JS animation via style.left */
+	height: 100%;
+	width: 1920px; /* Width of individual backgrounds */
+}
+
+nav#timeline li, .description {
+	-webkit-transition: 300ms ease;
+}
+
+/* Applied to the active panel */
+nav#timeline li:hover {
+	-webkit-filter: saturate(2);
+}
+
+nav#timeline li:hover ~li {
+	-webkit-filter: blur(3px);
+
+}
+
+.active {
+
+-webkit-transition-duration: 350ms;
+-moz-transition-duration: 350ms;
+transition-duration: 350ms;
+-webkit-transition-duration: 350ms;
+-moz-transition-duration: 350ms;
+	-webkit-filter: saturate(0);
+		background-color: red;
+		width: 60%;
+		/*height: 30px;*/
+		margin: 0 auto;
+		
+	box-shadow: 0px 0px 20px rgba(255,10,50,0.8);
+	border-radius: 50%;
+
+}
+
+nav#timeline li:hover .description {
+	color: #CCC;
+	-webkit-transform: translateX(25px);
+}
+
+/* Applied to the active panel and all to the left */
+.slideLeft{
+	-webkit-transform: translateX(-25px);
+}
+
+/* Applied to the active panel and all to the right */
+.slideRight {
+	-webkit-transform: translateX(25px);
+}
+
+.description {
+	position: relative;
+	text-align: center;
+	width: 25em;
+	padding-top: 8%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.description h2 {
+	text-transform: uppercase;
+
+	font-weight: 700;
+}
+
+.description span {
+	font-weight: 400;
+}
+
+/* Initial positioning of slides: Note that we could use 
+hue-rotate instead of images, but that is not performant. */
+li#zero {
+	left: calc(25em * 0);
+	background: url("./zero.jpg");
+}
+
+li#one {
+	left: calc(25em * 1);
+	background: url("./one.jpg");
+}
+
+li#two {
+	left: calc(25em * 2);
+	background: url("./two.jpg");
+}
+
+li#three {
+	left: calc(25em * 3);
+	background: url("./three.jpg");
+}
+
+li#four {
+	left: calc(25em * 4);
+	background: url("./four.jpg");
+}
+
+li#five {
+	left: calc(25em * 5);
+	background: url("./five.jpg");
+}
+
+li#six {
+	left: calc(25em * 6);
+	background: url("./six.jpg");
+}
+.
+.text{
+	position:relative;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+.mainq{
+	font-size: 8em;
+	margin: 0 auto;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	margin-bottom:50px; 
+
+}
+
+.takeq{
+	font-size: 3em;
+	margin: 0 auto;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	margin-bottom:20px;
+
+}
+.options input{
+	text-align: left;
+
+}
+.arrow{
+	display: block;
+	width: 50%;
+	height: 20%;
+	background: url('./arrow.png') no-repeat;
+	margin: 0 auto;
+
+}
+
+
+input[type=radio] {
+		display:none;
+	}
+
+input[type=radio] + label{
+		width: 200px !important;
+		margin: 0 auto;
+		display:block;
+		
+		padding: 4px 12px;
+		
+		font-size: 14px;
+		line-height: 20px;
+		color: #333;
+		text-align: center;
+		text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+		vertical-align: middle;
+		cursor: pointer;
+		background-color: #f5f5f5;
+		background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+		background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+		background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+		background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+		background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+		background-repeat: repeat-x;
+		border: 1px solid #ccc;
+		border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+		border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+		border-bottom-color: #b3b3b3;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	}
+
+	 input[type=radio]:checked + label{
+		   background-image: none;
+		outline: 0;
+		-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+		-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+		box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+			background-color: gray;
+	}
+
+.results{
+	position: relative;
+	max-width: 600px;
+	height: 600px;
+	-webkit-transform: rotate(270deg);
+	background: url('./arrow.png') no-repeat;
+	
+	top: -50px;
+}
+
+.sbutton{
+font-size: 2.3em;
+font-family: 'Arvo', serif;
+color: gray;
+}
+
+.resultado{
+background: transparent;
+height: 300px;
+width: 500px;
+position: absolute;
+font-size: 30em;
+left: 300px;
+top: 100px;
+font-family: 'Arvo', serif;
+color: gray;
+
+
+}
+h1{
+	text-transform: uppercase;
+
+	font-weight: 700;
+	position: relative;
+	text-align: center;
+	width: 25em;
+	padding-top: 4%;
+	font-family: 'Open Sans', sans-serif;
+
+}
+ #landing{
+ 	top: 320px;
+ 	left: 140px;
+ 	position: relative;
+ 	height: 100px;
+ 	width:200px;
+ 	background: red;
+ 	border-radius: 20px;
+ 	z-index: 2;
+ 	-webkit-filter: saturate(0);
+
+ }
+  .centro{
+  	top:18px;
+  	width: 90%;
+  	position: relative;
+	margin:0 auto;
+	text-align: center;
+  }
+	input[type=submit] {
+		
+		z-index: 1000;
+	}
