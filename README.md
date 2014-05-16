@@ -31,11 +31,20 @@ Navigation - survey.js
 This file has the logic for the navigation trought the survey and the result of the interaction with the buttons.
 
 ```
-next(){}
+next();
 ```
 Allows the user moving to the next step of the survey.
 
 ```
-prev(){}
+prev();
 ```
 Allows the user to go back one step in the survey.
+
+```
+abutton();
+abutton();
+abutton();
+abutton();
+
+```
+Allows the user to select the survey.
