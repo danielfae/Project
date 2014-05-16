@@ -47,4 +47,4 @@ abutton();
 abutton();
 
 ```
-Allows the user to select the survey.
+Allows the user to select the option of the survey on a given question.
