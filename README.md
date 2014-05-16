@@ -31,57 +31,11 @@ Navigation - survey.js
 This file has the logic for the navigation trought the survey and the result of the interaction with the buttons.
 
 ```
-var ant=document.getElementById('question'+n);
-var sig=document.getElementById('question'+(n+1));
-if (n==0) {
-	// Scroll until the end
-
-	scrollWin(0,340);
-	// document.getElementById('main').setAttribute('style','top:-679px;');
-		// document.getElementsByClassName('hero-overlay')[0].classList.add('.animated');
-		// document.getElementsByClassName('hero-overlay')[0].classList.add('.bounceOutRight');
-			
-				document.getElementsByClassName('hero-overlay')[0].setAttribute('style','height:0px;');
-	// document.getElementsByClassName('hero-overlay')[0].setAttribute('style','display:none;');
-	n=n+1;
-	sig.classList.add('active');
-	document.getElementById('timeline').setAttribute('style','left:'+movement+'px;'); 
-
-	//after 2400 submit() and give results
-}
-else{
-	if (n==6 || movement<=-2000) {
-		document.getElementById('timeline').setAttribute('style','left:'+(movement-400)+'px;');
-		submit();
-		n=n+1;
-		if (n==8) {
-			document.getElementsByClassName('hero-overlay')[0].removeAttribute('style','height:0px;');
-			n=0;
-			movement=0;
-			document.getElementById('timeline').setAttribute('style','left:'+movement+'px;');
-
-			};
-		console.log("forward to", "Results in Panel#"+n);
-	}
-	else{
-		if (n==5) {
-	$("#flecha").show();		
-	$("#landing").show();		
-	document.getElementById('landing').classList.remove('animated');
-    document.getElementById('landing').classList.remove('bounceOutUp');
-	document.getElementById('landing').classList.add('animated');
-    document.getElementById('landing').classList.add('bounceInDown');
-		};
-	n=n+1;
-	console.log("forward to", "question"+n);
-	movement=movement-400;
-	document.getElementById('timeline').setAttribute('style','left:'+movement+'px;');
-	ant.classList.remove('active');
-	sig.classList.add('active');
-		}
-	}
-}
+next(){}
+```
+Allows the user moving to the next step of the survey.
 
 ```
-
-
+prev(){}
+```
+Allows the user to go back one step in the survey.
