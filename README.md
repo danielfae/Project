@@ -51,3 +51,14 @@ Allows the user to select the option of the survey on a given question.
 
 To run without BeagleBoeard: comment the loop at the end of the file buttons.js
 =======
+```
+  window.setInterval(function() {
+    readingButton();
+    aButtonReading();
+    bButtonReading();
+    cButtonReading();
+    dButtonReading();
+    nextButtonReading();
+    prevButtonReading();
+  }, 500);
+```
