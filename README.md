@@ -42,9 +42,12 @@ Allows the user to go back one step in the survey.
 
 ```
 abutton();
-abutton();
-abutton();
-abutton();
+bbutton();
+cbutton();
+dbutton();
 
 ```
 Allows the user to select the option of the survey on a given question.
+
+To run without BeagleBoeard: comment the loop at the end of the file buttons.js
+=======
